@@ -4,36 +4,62 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
-
+    <title>Arduino Painting Game</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- Load p5.js -->
+    <!-- Load Libraries -->
     <script src="libraries/p5.min.js"></script>
-    
-    <!-- Load p5.sound.js for sound support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
-
-    <!-- Load Tone.js (if you're using it for additional sound synthesis) -->
     <script src="libraries/Tone.js"></script>
-
     <script src="https://unpkg.com/@gohai/p5.webserial@^1/libraries/p5.webserial.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      .note {
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+      }
+
+      .sketch, .video {
+        flex: 1 1 45%;
+      }
+
+      iframe {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body>
     <h1>Arduino Painting Game</h1>
 
-    <p><strong>Note:</strong> This project uses an Arduino breadboard and will not fully work unless connected via USB and run in a compatible browser (Chrome).</p>
+    <p class="note"><strong>Note:</strong> This project uses an Arduino breadboard and will not fully work unless connected via USB and run in a compatible browser (Chrome).</p>
 
-    <!-- Load sketch first so canvas appears at top -->
-    <script src="sketch.js"></script>
+    <div class="container">
+      <div class="sketch">
+        <!-- p5.js sketch canvas will render here -->
+        <script src="sketch.js"></script>
+      </div>
 
-    <h2>Demo Video</h2>
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/C6NCwF_kgRc"
-      title="Arduino Painting Game Demo" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-
-    <p><a href="https://youtu.be/C6NCwF_kgRc" target="_blank">Watch on YouTube</a></p>
+      <div class="video">
+        <h2>Demo Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C6NCwF_kgRc"
+          title="Arduino Painting Game Demo" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p><a href="https://youtu.be/C6NCwF_kgRc" target="_blank">Watch on YouTube</a></p>
+      </div>
+    </div>
   </body>
 </html>
