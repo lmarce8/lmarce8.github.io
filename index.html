@@ -17,26 +17,17 @@
       body {
         font-family: Arial, sans-serif;
         margin: 20px;
+        text-align: center;
       }
 
       .note {
         margin-bottom: 20px;
       }
 
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: flex-start;
-      }
-
-      .sketch, .video {
-        flex: 1 1 45%;
-      }
-
       iframe {
         max-width: 100%;
         height: auto;
+        margin-top: 40px;
       }
     </style>
   </head>
@@ -46,20 +37,14 @@
 
     <p class="note"><strong>Note:</strong> This project uses an Arduino breadboard and will not fully work unless connected via USB and run in a compatible browser (Chrome).</p>
 
-    <div class="container">
-      <div class="sketch">
-        <!-- p5.js sketch canvas will render here -->
-        <script src="sketch.js"></script>
-      </div>
+    <!-- p5.js canvas loads here -->
+    <script src="sketch.js"></script>
 
-      <div class="video">
-        <h2>Demo Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/C6NCwF_kgRc"
-          title="Arduino Painting Game Demo" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-        <p><a href="https://youtu.be/C6NCwF_kgRc" target="_blank">Watch on YouTube</a></p>
-      </div>
-    </div>
+    <h2>Demo Video</h2>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/C6NCwF_kgRc"
+      title="Arduino Painting Game Demo" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p><a href="https://youtu.be/C6NCwF_kgRc" target="_blank">Watch on YouTube</a></p>
   </body>
 </html>
